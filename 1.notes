@@ -1,0 +1,47 @@
+1.install anaconda
+
+2. install Java 1.8
+
+3. install scala sudo apt-get install scala
+
+4.pip3 install py4j
+
+5.install spark 2.1.0
+
+6.mak@mak-Aspire-A515-51G:~$ chmod -R 777 spark-2.2.0-bin-hadoop2.7
+mak@mak-Aspire-A515-51G:~$ export SPARK_HOME='/home/mak/spark-2.2.0-bin-hadoop2.7'
+mak@mak-Aspire-A515-51G:~$ export PATH=$SPARK_HOME:$PATH
+mak@mak-Aspire-A515-51G:~$ export PYTHONPATH=$SPARK_HOME/python:$PYTHONPATH
+mak@mak-Aspire-A515-51G:~$ export PYSPARK_DRIVER_PYTHON="jupyter"
+mak@mak-Aspire-A515-51G:~$ export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+mak@mak-Aspire-A515-51G:~$ export PYSPARK_PYTHON=python3
+
+mak@mak-Aspire-A515-51G:~/spark-2.2.0-bin-hadoop2.7/python$ python3
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 18:10:19) 
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pyspark
+>>> 
+
+mak@mak-Aspire-A515-51G:~/spark-2.2.0-bin-hadoop2.7/python$ jupyter-notebook
+mak@mak-Aspire-A515-51G:~$ pip3 install findspark
+
+mak@mak-Aspire-A515-51G:~$ python
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 18:10:19) 
+[GCC 7.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import pyspark
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'pyspark'
+>>> import findspark
+>>> findspark.init('/home/mak/spark-2.2.0-bin-hadoop2.7')
+>>> import pyspark
+>>> 
+
+mak@mak-Aspire-A515-51G:~$ jupyter-notebook 
+import findspark
+findspark.init('/home/mak/spark-2.2.0-bin-hadoop2.7')
+import pyspark
+
+
